@@ -1,0 +1,560 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo: #090E1B;
+    --card: #111C2C;
+    --azul-claro: #A5E8F2;
+    --azul: #62C5D8;
+    --azul-escuro: #527F9B;
+    --gelo: #D0F7FA;
+    --texto: #F0FAFC;
+    --texto-secundario: #A8C2CB;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: 'Nunito', sans-serif;
+}
+
+/* CABEÇALHO */
+
+header {
+    padding: 22px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #090E1B;
+    border-bottom: 1px solid rgba(165, 232, 242, 0.15);
+}
+
+.logo {
+    color: var(--azul-claro);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--texto-secundario);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+
+/* BOTÕES */
+
+.botao {
+    display: inline-block;
+    padding: 15px 28px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(100deg, #62C5D8, #D0F7FA);
+    color: #0B1A25;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 22px rgba(165, 232, 242, 0.3);
+}
+
+/* APRESENTAÇÃO */
+
+.hero {
+    min-height: 570px;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 75% 50%, #183D50 0%, transparent 38%),
+        linear-gradient(120deg, #090E1B, #102638);
+}
+
+.hero-texto {
+    max-width: 550px;
+}
+
+.etiqueta,
+.titulo-secao span {
+    color: var(--azul);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(48px, 8vw, 85px);
+    margin: 18px 0 5px;
+    color: var(--azul-claro);
+    text-shadow: 0 0 30px rgba(98, 197, 216, 0.35);
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: var(--texto-secundario);
+    line-height: 1.8;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+/* PLANETA */
+
+.planeta {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    z-index: 2;
+    border-radius: 50%;
+    overflow: visible;
+    background: transparent;
+}
+
+.planeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* CURIOSIDADES */
+
+.curiosidades {
+    padding: 90px 10%;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-secao h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.titulo-secao p {
+    color: var(--texto-secundario);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    padding: 28px;
+    border-radius: 15px;
+    background: var(--card);
+    border: 1px solid rgba(165, 232, 242, 0.15);
+    transition: 0.3s;
+}
+
+
+
+.icone {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: var(--azul-claro);
+}
+
+.card p {
+    color: var(--texto-secundario);
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* HISTÓRIA */
+
+.historia {
+    padding: 85px 10%;
+    background: linear-gradient(120deg, #102638, #142E40);
+}
+
+.historia-conteudo {
+    max-width: 800px;
+    margin: auto;
+}
+
+.historia h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.historia p {
+    color: var(--texto-secundario);
+    line-height: 1.8;
+    margin-bottom: 17px;
+}
+
+.mensagem {
+    padding: 22px;
+    margin-top: 25px;
+    border-left: 3px solid var(--azul);
+    background: rgba(9, 14, 27, 0.55);
+    color: var(--azul-claro);
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.mensagem span {
+    display: block;
+    margin-top: 12px;
+    color: var(--texto-secundario);
+    font-size: 12px;
+}
+
+/* MISSÃO */
+
+.missao {
+    padding: 90px 8%;
+}
+
+/* PAINEL DO JOGO */
+
+.jogo {
+    max-width: 750px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 16px;
+    background: var(--card);
+    border: 1px solid rgba(165, 232, 242, 0.2);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.tela {
+    display: none;
+}
+
+/* MOSTRA A TELA ESCOLHIDA */
+
+#inicio {
+    display: block;
+}
+
+.jogo:has(.tela:target) #inicio {
+    display: none;
+}
+
+.tela:target {
+    display: block;
+    animation: aparecer 0.4s ease;
+}
+
+/* TOPO DO PAINEL */
+
+.painel-topo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(165, 232, 242, 0.15);
+    color: var(--azul-claro);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.luz {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #F05A65;
+    box-shadow: 0 0 10px #F05A65;
+}
+
+.status {
+    margin-left: auto;
+    color: #F08080;
+    font-size: 9px;
+}
+
+/* CONTEÚDO DAS ETAPAS */
+
+.conteudo-tela {
+    padding: 30px 0 10px;
+    text-align: center;
+}
+
+.icone-painel {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.conteudo-tela h3,
+.tela-erro h3 {
+    color: var(--azul-claro);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.etapa {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--azul);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.conteudo-tela p,
+.tela-erro p {
+    color: var(--texto-secundario);
+    line-height: 1.7;
+}
+
+.pista {
+    padding: 18px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background: rgba(98, 197, 216, 0.1);
+    border: 1px solid rgba(98, 197, 216, 0.2);
+    color: var(--gelo);
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.ajuda {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+/* OPÇÕES */
+
+.opcoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin: 25px 0;
+}
+
+.opcao {
+    min-height: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(165, 232, 242, 0.25);
+    border-radius: 12px;
+    background: #172C3C;
+    color: var(--azul-claro);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.opcao span {
+    font-size: 34px;
+}
+
+
+
+/* ERROS */
+
+.tela-erro {
+    padding: 45px 15px;
+    text-align: center;
+}
+
+.tela-erro h3 {
+    color: #FF8585;
+}
+
+.tela-erro p {
+    max-width: 430px;
+    margin: 0 auto 25px;
+}
+
+/* CONCLUSÃO */
+
+.resultado {
+    padding: 35px 15px;
+    text-align: center;
+}
+
+.resultado-icone {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.resultado > span {
+    color: var(--azul);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.resultado h2 {
+    color: var(--azul-claro);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    margin: 18px 0;
+}
+
+.resultado p {
+    color: var(--texto-secundario);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.mensagem-final {
+    padding: 20px;
+    margin: 25px 0;
+    background: rgba(9, 14, 27, 0.5);
+    border-radius: 8px;
+    color: var(--gelo);
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.mensagem-final span {
+    display: block;
+    margin-top: 12px;
+    color: var(--texto-secundario);
+    font-size: 12px;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RODAPÉ */
+
+footer {
+    padding: 30px 15px;
+    text-align: center;
+    background: #070B13;
+    border-top: 1px solid rgba(165, 232, 242, 0.15);
+}
+
+footer p {
+    color: var(--azul-claro);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+footer span {
+    color: var(--texto-secundario);
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 20px 5%;
+    }
+
+    nav {
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 65px 7%;
+    }
+
+    .planeta-area {
+        transform: scale(0.85);
+        margin: -15px 0;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .curiosidades,
+    .missao,
+    .historia {
+        padding: 65px 6%;
+    }
+}
+
+@media (max-width: 550px) {
+
+    header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .jogo {
+        padding: 20px 15px;
+    }
+
+    .opcoes {
+        gap: 10px;
+    }
+
+    .opcao {
+        min-height: 95px;
+    }
+
+    .resultado h2 {
+        font-size: 22px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,625 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Orbitron:wght@500;600;700;800&display=swap');
+
+:root {
+    --fundo: #171923;
+    --fundo2: #20232E;
+    --card: #292C37;
+    --cinza: #9297A1;
+    --areia: #D6C6AC;
+    --amarelo: #F4B942;
+    --laranja: #E4773E;
+    --branco: #F5F2EC;
+    --texto: #B9BBC4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--branco);
+    font-family: 'Nunito', sans-serif;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #11131B;
+    border-bottom: 1px solid #343743;
+}
+
+.logo {
+    color: var(--amarelo);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--amarelo);
+}
+
+/* APRESENTAÇÃO */
+
+.inicio {
+    min-height: 520px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 12%;
+    background:
+        radial-gradient(circle at 75% 45%, #5A493D55, transparent 30%),
+        radial-gradient(circle at 20% 10%, #343743, transparent 40%),
+        var(--fundo);
+}
+
+.inicio-conteudo {
+    max-width: 550px;
+}
+
+.subtitulo {
+    color: var(--amarelo);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.inicio h1 {
+    margin: 18px 0 8px;
+    color: var(--areia);
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(42px, 7vw, 76px);
+    letter-spacing: 7px;
+}
+
+.inicio h2 {
+    font-size: 21px;
+}
+
+.inicio p {
+    max-width: 480px;
+    margin: 18px 0 28px;
+    color: var(--texto);
+    line-height: 1.8;
+}
+
+.botao {
+    display: inline-block;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 8px;
+    background: var(--amarelo);
+    color: #24232A;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background: var(--laranja);
+    transform: translateY(-3px);
+}
+
+/* PLANETA */
+
+.planeta-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+}
+
+.planeta {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 30% 25%, #D6C6AC 0 5%, transparent 6%),
+        radial-gradient(circle at 65% 65%, #555762 0 9%, transparent 10%),
+        radial-gradient(circle at 35% 70%, #777984 0 8%, transparent 9%),
+        radial-gradient(circle at 70% 30%, #A7A2A0 0 5%, transparent 6%),
+        linear-gradient(135deg, #B5A997, #77716D 55%, #343743);
+    box-shadow: 0 0 60px #F4B94235;
+}
+
+/* TÍTULOS */
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-secao h2 {
+    margin: 13px 0;
+    color: var(--areia);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+}
+
+.titulo-secao p {
+    color: var(--texto);
+    line-height: 1.7;
+}
+
+/* SOBRE */
+
+.sobre {
+    padding: 90px 12%;
+    background: var(--fundo2);
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.sobre-texto p {
+    margin-bottom: 17px;
+    color: var(--texto);
+    line-height: 1.9;
+}
+
+.dados-planeta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.dado {
+    min-height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background: var(--card);
+    border: 1px solid #414450;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.dado strong {
+    color: var(--amarelo);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 22px;
+}
+
+.dado span {
+    margin-top: 8px;
+    color: var(--texto);
+    font-size: 12px;
+}
+
+/* CURIOSIDADES */
+
+.curiosidades {
+    padding: 90px 10%;
+}
+
+.grade-curiosidades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 28px;
+    background: var(--card);
+    border: 1px solid #414450;
+    border-radius: 13px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--amarelo);
+}
+
+.icone {
+    font-size: 30px;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    color: var(--areia);
+}
+
+.card p {
+    color: var(--texto);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* HISTÓRIA */
+
+.historia {
+    padding: 85px 12%;
+    background:
+        linear-gradient(135deg, #292832, #20232E);
+    text-align: center;
+}
+
+.historia-conteudo {
+    max-width: 800px;
+    margin: auto;
+}
+
+.historia h2 {
+    margin: 15px 0 25px;
+    color: var(--areia);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+}
+
+.historia p {
+    margin-bottom: 15px;
+    color: var(--texto);
+    line-height: 1.9;
+}
+
+/* MISSÃO */
+
+.missao {
+    padding: 90px 8%;
+    background: var(--fundo);
+}
+
+.painel-jogo {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+    background: var(--fundo2);
+    border: 1px solid #414450;
+    border-radius: 16px;
+}
+
+/* DIÁLOGO */
+
+.dialogo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: var(--card);
+    border-radius: 12px;
+}
+
+.zeus {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #414450;
+    font-size: 30px;
+}
+
+.dialogo strong {
+    color: var(--amarelo);
+}
+
+.dialogo p {
+    margin-top: 5px;
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* PROGRESSO */
+
+.progresso-area {
+    margin-bottom: 30px;
+}
+
+.progresso-texto {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: var(--texto);
+    font-size: 13px;
+}
+
+.barra-progresso {
+    height: 10px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #414450;
+}
+
+#barra-progresso {
+    width: 0%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, var(--laranja), var(--amarelo));
+    transition: width 0.3s;
+}
+
+/* TABULEIRO E DICAS */
+
+.jogo-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 330px;
+    align-items: start;
+    gap: 35px;
+}
+
+.tabuleiro-area,
+.dicas-area {
+    padding: 22px;
+    background: var(--card);
+    border-radius: 12px;
+}
+
+.tabuleiro-area h3,
+.dicas-area h3 {
+    margin-bottom: 10px;
+    color: var(--areia);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 17px;
+}
+
+.orientacao {
+    margin-bottom: 20px;
+    color: var(--texto);
+    font-size: 13px;
+}
+
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(12, 35px);
+    grid-template-rows: repeat(10, 35px);
+    gap: 3px;
+    width: max-content;
+    margin: auto;
+}
+
+.casa {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    background: var(--areia);
+    border: 1px solid #A99B85;
+    border-radius: 3px;
+}
+
+.casa input {
+    width: 100%;
+    height: 100%;
+    padding-top: 5px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #24232A;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.casa input:focus {
+    background: var(--amarelo);
+    border-radius: 3px;
+}
+
+.casa.correta {
+    background: #8EBB91;
+    border-color: #8EBB91;
+}
+
+.casa.correta input {
+    color: #17251B;
+}
+
+.numero {
+    position: absolute;
+    top: 1px;
+    left: 3px;
+    z-index: 1;
+    color: #51483C;
+    font-size: 9px;
+    font-weight: 900;
+    pointer-events: none;
+}
+
+/* DICAS */
+
+.dicas-grupo {
+    margin: 20px 0;
+}
+
+.dicas-grupo h4 {
+    margin-bottom: 12px;
+    color: var(--amarelo);
+}
+
+.dicas-grupo p {
+    margin-bottom: 12px;
+    color: var(--texto);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.dicas-grupo strong {
+    color: var(--areia);
+}
+
+.dicas-area .botao {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.mensagem {
+    min-height: 25px;
+    margin-top: 15px;
+    color: var(--amarelo);
+    font-size: 13px;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* FINAL */
+
+.final-missao {
+    display: none;
+    max-width: 650px;
+    margin: 40px auto 0;
+    padding: 35px;
+    background: var(--card);
+    border: 1px solid var(--amarelo);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.estrela {
+    color: var(--amarelo);
+    font-size: 40px;
+}
+
+.final-missao h2 {
+    margin: 15px 0;
+    color: var(--amarelo);
+    font-family: 'Orbitron', sans-serif;
+}
+
+.final-missao p {
+    margin-bottom: 25px;
+    color: var(--texto);
+    line-height: 1.8;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .inicio {
+        flex-direction: column;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .inicio p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .grade-curiosidades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .jogo-conteudo {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .inicio {
+        padding: 70px 7%;
+    }
+
+    .inicio h1 {
+        letter-spacing: 4px;
+    }
+
+    .planeta-area {
+        width: 230px;
+        height: 230px;
+    }
+
+    .planeta {
+        width: 190px;
+        height: 190px;
+    }
+
+    .sobre,
+    .curiosidades,
+    .historia,
+    .missao {
+        padding: 65px 7%;
+    }
+
+    .grade-curiosidades {
+        grid-template-columns: 1fr;
+    }
+
+    .dados-planeta {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .painel-jogo {
+        padding: 15px;
+    }
+
+    .tabuleiro-area,
+    .dicas-area {
+        padding: 15px;
+    }
+
+    .tabuleiro {
+        grid-template-columns: repeat(12, 27px);
+        grid-template-rows: repeat(10, 27px);
+        gap: 2px;
+    }
+
+    .casa {
+        width: 27px;
+        height: 27px;
+    }
+
+    .casa input {
+        font-size: 13px;
+    }
+
+    .numero {
+        font-size: 7px;
+    }
+
+    .dialogo {
+        align-items: flex-start;
+    }
+}
